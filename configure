@@ -1166,7 +1166,7 @@ else
   fi
 fi
 
-for ac_prog in $CCC c++ g++ gcc CC cxx cc++ cl
+for ac_prog in $CCC g++ gcc CC cxx cc++ cl
 do
 # Extract the first word of "$ac_prog", so it can be a program name with args.
 set dummy $ac_prog; ac_word=$2
@@ -5470,7 +5470,8 @@ cross_compiling=$ac_cv_prog_cxx_cross
 if test "x${GCC}" = "xyes"
 then
   OLDCXXFLAGS="$CXXFLAGS";
-  CXXFLAGS="-fno-for-scope"
+  # CXXFLAGS="-fno-for-scope"
+  CXXFLAGS="-fpermissive"
   echo $ac_n "checking "for g++ -fno-for-scope option"""... $ac_c" 1>&6
 echo "configure:5476: checking "for g++ -fno-for-scope option"" >&5
 if eval "test \"`echo '$''{'has_gxx_no_for_scope'+set}'`\" = set"; then
@@ -5502,10 +5503,10 @@ fi
 
 echo "$ac_t""$has_gxx_no_for_scope" 1>&6
   CXXFLAGS="$OLDCXXFLAGS";
-  if test "$has_gxx_no_for_scope" = "yes"
-  then
-    CXXFLAGS="$CXXFLAGS -fno-for-scope"
-  fi
+  # if test "$has_gxx_no_for_scope" = "yes"
+  # then
+  #   # CXXFLAGS="$CXXFLAGS -fno-for-scope"
+  # fi
 fi
 ac_ext=c
 # CFLAGS is not in ac_cpp because -g, -O, etc. are not valid cpp options.
